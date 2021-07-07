@@ -1,7 +1,7 @@
 # chinese_poetry_generator 唐诗生成器
 Chinese poetry generator using deep learning models (LSTM CharRNN)
 
-基于Keras的LSTM CharRNN模型，给定第一句五个字，自动生成五言唐诗。
+基于PyTorch的LSTM CharRNN模型，给定第一句五个字，自动生成五言唐诗。
 
 
 ## Data
@@ -15,7 +15,7 @@ Data is processed such that each time the input to the model is 6 characters and
 ## Model
 For the first attempt, a very simple LSTM model is used. It has only __one LSTM layer__ with __256 hidden units__.
 
-Model is implemented in Keras.
+Model is implemented in PyTorch.
 
 ## Results
 A total of 30379 poetries were used in training and the output from just one epoch is not bad.
