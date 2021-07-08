@@ -20,13 +20,24 @@ Model is implemented in PyTorch.
 ## Results
 A total of 30379 poetries were used in training and the output from just one epoch is not bad.
 ```
-generated = generate_poem("明月几时有，", output_length=18, temperature=0.2)
+generated = generate_poem(trained_model, "我有紫霞想，", output_length=18, temperature=0.2)
+print(generated)
+```
+何人理白云。朝廷风云外，主人不可知。
+
+Output after 2 epochs:
+```
+generated = generate_poem(trained_model, "明月几时有，", output_length=18, temperature=0.2)
 print(generated)
 ```
 清风吹不闻。今来一何事，自有一生心。
 
 ```
-generated = generate_poem("我有紫霞想，", output_length=18, temperature=0.2)
+generated = generate_poem(trained_model, "八月湖水平，", output_length=18, temperature=0.2)
 print(generated)
 ```
-何人理白云。朝廷风云外，主人不可知。
+三南真得归。山川无处处，云瀛有时时。
+
+可以看出，模型学习到了一些基本的对仗（e.g. 三-八，山-云，无-有），但押韵可能属于更深层次的feature,目前还没有学习到。
+
+
